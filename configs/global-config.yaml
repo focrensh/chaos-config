@@ -24,7 +24,7 @@ policies:
     path_re_match: 'ALL'
     method: ANY
     env:
-      - VES_IO_SITENAME: ves-io-me1-mel
+      - VES_IO_SITENAME: ves-io-tn2-lon
     env_policy_match: AND
     headers: []
     header_policy_match: AND
