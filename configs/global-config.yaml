@@ -1,5 +1,5 @@
 debug: false
-reload_timer: 60
+reload_timer: 15
 policies:
   - id: 0
     src_cidr:  'ALL'
