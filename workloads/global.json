@@ -1,8 +1,7 @@
 {
-  "namespace": "pm",
   "metadata": {
     "name": "trading",
-    "namespace": null,
+    "namespace": "pm",
     "labels": {
       "via-uat-version": "1.0"
     },
@@ -45,30 +44,7 @@
         ]
       },
       "deploy_options": {
-        "deploy_re_sites": {
-          "site": [
-            {
-              "tenant": "ves-io",
-              "namespace": "system",
-              "name": "tn2-lon"
-            },
-            {
-              "tenant": "ves-io",
-              "namespace": "system",
-              "name": "ny8-nyc"
-            },
-            {
-              "tenant": "ves-io",
-              "namespace": "system",
-              "name": "sv10-sjc"
-            },
-            {
-              "tenant": "ves-io",
-              "namespace": "system",
-              "name": "sg3-sin"
-            }
-          ]
-        }
+        "all_res": {}
       },
       "advertise_options": {
         "advertise_in_cluster": {
@@ -82,5 +58,6 @@
         }
       }
     }
-  }
+  },
+  "resource_version": null
 }
