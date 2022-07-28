@@ -51,6 +51,21 @@
               "tenant": "ves-io",
               "namespace": "system",
               "name": "tn2-lon"
+            },
+            {
+              "tenant": "ves-io",
+              "namespace": "system",
+              "name": "ny8-nyc"
+            },
+            {
+              "tenant": "ves-io",
+              "namespace": "system",
+              "name": "sv10-sjc"
+            },
+            {
+              "tenant": "ves-io",
+              "namespace": "system",
+              "name": "sg3-sin"
             }
           ]
         }

@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "name": "trading-all",
+    "namespace": "pm",
+    "labels": {},
+    "annotations": {}
+  },
+  "spec": {
+    "origin_servers": [
+      {
+        "k8s_service": {
+          "service_name": "trading.pm",
+          "site_locator": {
+            "virtual_site": {
+              "tenant": "ves-io",
+              "namespace": "shared",
+              "name": "ves-io-all-res"
+            }
+          },
+          "vk8s_networks": {}
+        },
+        "labels": {}
+      }
+    ],
+    "no_tls": {},
+    "port": 8000,
+    "same_as_endpoint_port": {},
+    "healthcheck": [],
+    "loadbalancer_algorithm": "LB_OVERRIDE",
+    "endpoint_selection": "LOCAL_PREFERRED"
+  }
+}
