@@ -344,7 +344,7 @@ policies:
         direct_response_body: '{"method":"get","config":"paris_service"}'
         direct_response_body_encoding: NONE
   - id: 19
-    src_cidr:  '162.220.44.18/32'
+    src_cidr:  '52.52.219.220/32'
     path_re_match: 'ALL'
     method: ANY
     env: []
