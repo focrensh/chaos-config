@@ -349,8 +349,7 @@ policies:
     method: ANY
     env: []
     env_policy_match: AND
-    headers:
-      - xc-client: '162.220.44.18'
+    headers: [] # - xc-client: '162.220.44.18'
     header_policy_match: OR
     ip_version: 4
     reply_scripts:
