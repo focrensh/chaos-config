@@ -1,4 +1,4 @@
-debug: false
+debug: true
 reload_timer: 15
 policies:
   - id: 0
