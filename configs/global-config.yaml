@@ -1,362 +1,40 @@
-debug: true
-reload_timer: 15
+debug: false
+reload_timer: 10
 policies:
-  - id: 0
-    src_cidr:  'ALL'
-    path_re_match: 'ANY'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-ams9-ams
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"amsterdam_service"}'
-        direct_response_body_encoding: NONE
-  - id: 1
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-dc12-ash
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"ashburn_service"}'
-        direct_response_body_encoding: NONE
-  - id: 2
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-dal3-dal
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"dallas_services"}'
-        direct_response_body_encoding: NONE
-  - id: 3
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-fr4-fra
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"frankfurt_service"}'
-        direct_response_body_encoding: NONE
-  - id: 4
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-hk2-hkg
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"hongkong_service"}'
-        direct_response_body_encoding: NONE
-  - id: 5
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-ls1-lis
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"lisabon_service"}'
-        direct_response_body_encoding: NONE
-  - id: 6
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-tn2-lon
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"london_service"}'
-        direct_response_body_encoding: NONE
-  - id: 7
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-me1-mel
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"melbourne_service"}'
-        direct_response_body_encoding: NONE
-  - id: 8
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-ny8-nyc
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"newyork_services"}'
-        direct_response_body_encoding: NONE
-  - id: 9
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-os1-osa
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"osaka_service"}'
-        direct_response_body_encoding: NONE
-  - id: 10
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-pa2-par
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"paris_service"}'
-        direct_response_body_encoding: NONE
-  - id: 11
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-sv10-sjc
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 4000
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 404
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"sanjose_service"}'
-        direct_response_body_encoding: NONE
-  - id: 12
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-wes-sea
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"seattle_service"}'
-        direct_response_body_encoding: NONE
-  - id: 13
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-sg3-sin
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"singapore_service}'
-        direct_response_body_encoding: NONE
-  - id: 14
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-sto6-sto
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"stockholm_service"}'
-        direct_response_body_encoding: NONE
-  - id: 15
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-sy5-syd
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"sydney_service"}'
-        direct_response_body_encoding: NONE
-  - id: 16
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-ty8-tky
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"tokyo_service"}'
-        direct_response_body_encoding: NONE
-  - id: 17
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-tr2-tor
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"toronto_service"}'
-        direct_response_body_encoding: NONE
-  - id: 18
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env:
-      - VES_IO_SITENAME: ves-io-pa4-par
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"paris_service"}'
-        direct_response_body_encoding: NONE
-  - id: 19
-    src_cidr:  'ALL'
-    path_re_match: 'ALL'
-    method: ANY
-    env: []
-    env_policy_match: AND
-    headers: []
-    header_policy_match: AND
-    ip_version: 4
-    reply_scripts:
-      - delay_ms: 0
-        repeat: 0
-        action: direct_response
-        direct_response_status_code: 200
-        direct_response_mime_type: 'application/json'
-        direct_response_body: '{"method":"get","config":"global_generic_service"}'
-        direct_response_body_encoding: NONE
+- id: 0
+  src_cidr: ALL
+  path_re_match: ALL
+  method: ANY
+  env:
+  - VES_IO_SITENAME: ves-io-wes-sea
+  env_policy_match: AND
+  headers: []
+  header_policy_match: AND
+  ip_version: 4
+  reply_scripts:
+  - delay_ms: 300
+    repeat: 0
+    action: direct_response
+    direct_response_status_code: 200
+    direct_response_mime_type: application/json
+    direct_response_body: '{"method":"get","config":"seattle_service"}'
+    direct_response_body_encoding: NONE
+  repeated: {}
+- id: 1
+  src_cidr: ALL
+  path_re_match: ALL
+  method: ANY
+  env: []
+  env_policy_match: AND
+  headers: []
+  header_policy_match: AND
+  ip_version: 4
+  reply_scripts:
+  - delay_ms: 0
+    repeat: 0
+    action: direct_response
+    direct_response_status_code: 200
+    direct_response_mime_type: application/json
+    direct_response_body: '{"method":"get","config":"global_generic_service"}'
+    direct_response_body_encoding: NONE
+  repeated: {}
