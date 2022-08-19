@@ -6,25 +6,6 @@ policies:
   path_re_match: ALL
   method: ANY
   env:
-  - VES_IO_SITENAME: ves-io-wes-sea
-  env_policy_match: AND
-  headers: []
-  header_policy_match: AND
-  ip_version: 4
-  reply_scripts:
-  - delay_ms: 300
-    repeat: 0
-    action: direct_response
-    direct_response_status_code: 200
-    direct_response_mime_type: application/json
-    direct_response_body: '{"method":"get","config":"seattle_service"}'
-    direct_response_body_encoding: NONE
-  repeated: {}
-- id: 1
-  src_cidr: ALL
-  path_re_match: ALL
-  method: ANY
-  env:
   - VES_IO_SITENAME: ves-io-sv10-sjc
   env_policy_match: AND
   headers: []
@@ -39,7 +20,7 @@ policies:
     direct_response_body: '{"method":"get","config":"sjc_service"}'
     direct_response_body_encoding: NONE
   repeated: {}
-- id: 2
+- id: 1
   src_cidr: ALL
   path_re_match: ALL
   method: ANY
