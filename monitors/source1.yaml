@@ -1,0 +1,3 @@
+monitors:
+- name: fakenews
+- name: monitor2
